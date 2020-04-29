@@ -13,14 +13,9 @@
     "@commitlint/config-conventional": "^8.3.4",
     "husky": "^4.2.5"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
   "husky": {
     "hooks": {
-      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
